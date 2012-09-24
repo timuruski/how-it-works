@@ -15,8 +15,7 @@ sites.each do |tuple|
       # Fork because Stasis sets some sort of globals that makes this only
       # work once per session.
       pid = Process.fork do
-        options = { }
-        Stasis.new(path, options).render
+        Stasis.new(path).render
       end
       Process.detach(pid)
     end
