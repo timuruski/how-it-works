@@ -1,3 +1,4 @@
+require 'fileutils'
 require 'stasis'
 
 sites = %w[howemailworks.com howpasswordswork.com].map { |site|
@@ -10,7 +11,7 @@ sites.each do |tuple|
   site, topic, path = tuple
   namespace :build do
     desc "Build #{site}"
-    task topic do
+    task topic => "link_shared:#{topic}" do
       puts "Building #{site}..."
       # Fork because Stasis sets some sort of globals that makes this only
       # work once per session.
@@ -33,6 +34,19 @@ sites.each do |tuple|
 
     desc "Removes all product files"
     task :all => sites.map { |tuple| "clean:#{tuple[1]}" }
+  end
+
+  namespace :link_shared do
+    desc "Links files from shared into #{site}"
+    task topic do
+      shared = FileList.new('shared/*')
+      shared.each do |path|
+        src = "../#{path}"
+        dest = "#{site}/#{File.basename(path)}"
+
+        FileUtils.symlink(src, dest) unless File.exist?(dest)
+      end
+    end
   end
 
   namespace :deploy do
