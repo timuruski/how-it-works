@@ -1,4 +1,4 @@
-# Why email is so important
+# Why your email address is so important
 
 An email address is the most important thing you own on the internet.
 With an email address you can log into Facebook, Twitter and YouTube.
@@ -10,7 +10,7 @@ for any website you log into. Considering how valuable an email address
 is, it's important to understand how it works and how to protect it.
 
 
-# What an email address is made from
+# What makes up an email address
 
 An email address has two parts. A user name and a server name.
 
@@ -38,27 +38,4 @@ office.
 
 # Protecting your email address
 
-
-## A more detailed explanation
-
-
-
-
----
-
-
-Your phone number and home address are used by the government to contact 
-you for important information.
-
-If you think of an email like a letter, the username is the name of the
-person printed on the envelope and the server name is the address of the
-building the letter is to be delivered to. Just as multiple people can
-live at a single address, multiple people can receive email through the
-same server. And just as you can receive mail at both your home and work
-address, you can receive email through multiple servers.
-
-An email address is one of the most important parts of using the
-Internet. More important than having a blog, or using Facebook or
-Twitter, or having the Internet in your pocket. With an email address
-you have a passport to virtually anything on the web. 
 
