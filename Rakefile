@@ -13,12 +13,7 @@ sites.each do |tuple|
     desc "Build #{site}"
     task topic do
       puts "Building #{site}..."
-      # Fork because Stasis sets some sort of globals that makes this only
-      # work once per session.
-      pid = Process.fork do
-        Stasis.new(path).render
-      end
-      Process.detach(pid)
+      Stasis.new(path).render
     end
 
     desc "Build all sites"
