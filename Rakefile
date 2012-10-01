@@ -11,7 +11,7 @@ sites.each do |tuple|
   site, topic, path = tuple
   namespace :build do
     desc "Build #{site}"
-    task topic => "link_shared:#{topic}" do
+    task topic do
       puts "Building #{site}..."
       # Fork because Stasis sets some sort of globals that makes this only
       # work once per session.

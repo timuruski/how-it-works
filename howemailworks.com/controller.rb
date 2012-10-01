@@ -1,5 +1,4 @@
-layout 'layouts/layout.html.erb'
-# ignore %r{layouts/}
+layout 'layout.html.erb'
 
 helpers do
   def site_title
